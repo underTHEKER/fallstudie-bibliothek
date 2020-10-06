@@ -10,6 +10,7 @@ public class main {
 		
 		//TEST
 
+		System.out.println("Ja!");
 	}
 
 }
