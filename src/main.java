@@ -8,9 +8,7 @@ public class main {
 		
 		System.out.println("Hello Markus :)");
 		
-		//TEST
-
-		System.out.println("Ja!");
+		
 	}
 
 }
