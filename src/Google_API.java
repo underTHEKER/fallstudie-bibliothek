@@ -38,25 +38,12 @@ public class Google_API {
 
 	}
 
-	public <JSONObject> void getInformation(){
-
-		JSONObject jsonObject = new JSONObject(PaListContent);
-		JSONArry api_json = jsonObject.getJSONArray("items");
-
-		for(int k=0; k<api_json.length(); k++) {
-			list.add(api_json.getJSONObject(k).getString("authors"));
-
-			if(api_json.getJSONObject(k).getString("authors").equalsIgnoreCase("XXX")){
-				System.out.println(api_json.getJSONObject(k).getSTring("authors"));
+	public void getInformation(){
+		
+		for(int i = 0; i < api_json.size(); i++) {
+			System.out.println("Index: " + i + " Feld: " + api_json.get(i));
 		}
 
-
-
-/*		for (int ig = 0; ig < api_json.size(); ig++){
-			if (api_json.get(ig).equals("authors")){
-				System.out.println(api_json.get(ig));
-			}
-*/		}
 
 	}
 
