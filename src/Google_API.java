@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Map;
 
+import org.json.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.io.*;
@@ -24,6 +25,8 @@ public class Google_API {
 	String url = "https://www.googleapis.com/books/v1/volumes?q=isbn:" + this.isbn;
 
 	String json_google;
+	
+	//JSONArray json_array = new JSONArray(json_google);
 
 	public Google_API() throws IOException {
 
@@ -36,11 +39,26 @@ public class Google_API {
 			// api_json.add(inputLine);
 			json_google = inputLine;
 			System.out.println(json_google);
+			
+			api_json.add(inputLine);
+		
+			
 		}
 		api_input.close();
 	}
 	
-	public void get_Book_Information() {
+	public void get_Book_Authors() {
+		
+		for(int i = 0; i < api_json.size(); i++) {
+			System.out.println("Index: " + i + " Wert: " + api_json.get(i));
+		}
+		
+		for(int i = 11; i < api_json.size(); i++) {
+			
+		}
+		
+		
+		
 		
 		
 	}
