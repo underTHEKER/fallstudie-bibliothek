@@ -1,15 +1,19 @@
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class main {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		//mhofmann
-		
-		System.out.println("Hello Markus :)");
-		System.out.println("Hello Jan :)");
-		
-		// jan isst scheiße :) 
+
+	private static Object Google_API;
+
+	public static void main(String[] args) throws IOException {
+
+
+		Google_API google_api = new Google_API();
+		google_api.getInformation();
+
+
 		
 		
 	}
