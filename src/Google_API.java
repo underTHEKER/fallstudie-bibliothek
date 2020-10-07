@@ -4,9 +4,14 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.io.*;
+import javax.json.*;
 
 public class Google_API {
-	
+
+	private final Object JsonArray;
+	private final Object Json;
+
 	/**
 	 * Büchersuche per API + ISBN 
 	 * 
@@ -15,14 +20,14 @@ public class Google_API {
 	 */
 	private String inputLine;
 	ArrayList<String> api_json = new ArrayList<>();
-	private String isbn = "9783442714964";
+	private String isbn = "9783800650002";
 	String url = "https://www.googleapis.com/books/v1/volumes?q=isbn:"+this.isbn;
 
 
 
 
 
-	public Google_API() throws IOException {
+	public <JsonArray> Google_API() throws IOException {
 		URL open_json = new URL(url);
 		BufferedReader api_input = new BufferedReader(
 				new InputStreamReader(
@@ -31,10 +36,16 @@ public class Google_API {
 		);
 
 		while ((inputLine = api_input.readLine()) != null){
-			System.out.println(inputLine);
+//			System.out.println(inputLine);
 			api_json.add(inputLine);
 		}
 		api_input.close();
+
+		JsonArray array = Json.createArrayBuilder().build)();
+		System.out.println("Elemente in Array: ");
+			for(int i=0; i < JsonArray.length; i++){
+				System.out.println(JsonArray[i]);
+			}
 
 	}
 
